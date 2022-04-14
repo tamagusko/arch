@@ -51,6 +51,7 @@ PKGS=(
     'htop'
     'gtop'
     'speedtest-cli'
+    'slack-desktop'
 )
 
 for PKG in "${PKGS[@]}"; do
