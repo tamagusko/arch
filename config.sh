@@ -52,6 +52,8 @@ PKGS=(
     'gtop'
     'speedtest-cli'
     'slack-desktop'
+    'p7zip'
+    'unrar'
 )
 
 for PKG in "${PKGS[@]}"; do
