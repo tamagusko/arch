@@ -1,0 +1,15 @@
+plugins=(
+    git
+    sudo
+    vscode
+    dnf
+    gitfast
+    command-not-found
+    gitignore
+    heroku
+    fzf
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    colored-man-pages
+    virtualenv
+)

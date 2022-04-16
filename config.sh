@@ -2,12 +2,13 @@
 
 # based on https://github.com/johnynfulleffect/ArchMatic
 
-VERSION="0.1"
+VERSION="0.2.0"
+DATE="2022-04-16"
 AUTHOR="Tiago Tamagusko"
 CONTACT="tamagusko@gmail.com"
 
 echo "-------------------------------------------------"
-echo "Arch Linux custom configuration v$VERSION"
+echo "Arch Linux custom configuration v$VERSION ($DATE)"
 echo "by $AUTHOR <$CONTACT>"
 echo "-------------------------------------------------"
 
@@ -23,7 +24,6 @@ echo "INSTALLING EXTRA SOFTWARES"
 echo
 
 PKGS=(
-    'linux-lts'
     'skype'
     'zoom'
     'unzip'
@@ -36,10 +36,12 @@ PKGS=(
     'fzf'
     'zsh-autosuggestions'
     'zsh-syntax-highlighting'
+    'fail2ban'
     'xed'
     'code'
     'hunspell'
-    'hunspell-en'
+    'hunspell-en_us'
+    'hunspell-pt-br'
     'okular'
     'dropbox'
     'vlc'
@@ -146,3 +148,13 @@ sudo curl https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20N
 sudo chmod 0444 MesloLGS%20NF%20Bold%20Italic.ttf
 
 fc-cache
+
+# add zshrc custom aliases
+echo 'alias py38=python3.8' >>! ~/.zshrc
+echo 'alias cd..="cd .."' >>! ~/.zshrc
+echo 'alias h="history"' >>! ~/.zshrc
+echo 'alias vi=vim' >>! ~/.zshrc
+echo 'alias svi="sudo vim"' >>! ~/.zshrc
+echo 'alias srun="uvicorn --port 5000 --host 127.0.0.1 main:app --reload"' >>! ~/.zshrc
+echo 'alias yolov5env="source /home/t1/Downloads/yolov5_training_env/bin/activate"' >>! ~/.zshrc
+echo 'alias gitignorebig="find . -size +100M | cat >> .gitignore"' >>! ~/.zshrc
