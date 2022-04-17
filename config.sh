@@ -24,6 +24,7 @@ echo "INSTALLING EXTRA SOFTWARES"
 echo
 
 PKGS=(
+    'python38'
     'skype'
     'zoom'
     'unzip'
@@ -155,6 +156,8 @@ echo 'alias cd..="cd .."' >>! ~/.zshrc
 echo 'alias h="history"' >>! ~/.zshrc
 echo 'alias vi=vim' >>! ~/.zshrc
 echo 'alias svi="sudo vim"' >>! ~/.zshrc
-echo 'alias srun="uvicorn --port 5000 --host 127.0.0.1 main:app --reload"' >>! ~/.zshrc
+echo 'alias srun="python -m uvicorn --port 5000 --host 127.0.0.1 main:app --reload"' >>! ~/.zshrc
 echo 'alias yolov5env="source /home/t1/Downloads/yolov5_training_env/bin/activate"' >>! ~/.zshrc
 echo 'alias gitignorebig="find . -size +100M | cat >> .gitignore"' >>! ~/.zshrc
+echo 'alias venvactivate="source .venv/bin/activate"' >>! ~/.zshrc
+echo 'alias venv38create="python3.8 -m virtualenv .venv"' >>! ~/.zshrc
