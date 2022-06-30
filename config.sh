@@ -2,8 +2,8 @@
 
 # based on https://github.com/johnynfulleffect/ArchMatic
 
-VERSION="0.2.0"
-DATE="2022-04-16"
+VERSION="0.3.0"
+DATE="2022-06-30"
 AUTHOR="Tiago Tamagusko"
 CONTACT="tamagusko@gmail.com"
 
@@ -78,10 +78,12 @@ echo
 
 # application shortcuts
 xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Primary><Alt>t' -s xfce4-terminal
+xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super>t' -s xfce4-terminal --drop-down
 xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Primary><Alt>e' -s thunar
 xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super>v' -s code
 xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Primary><Alt>p' -s gnome-pomodoro
-xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Primary><Super>space' -s xfce4-popup-whiskermenu
+xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Primary>>space' -s xfce4-popup-whiskermenu
+
 # window manager shortcuts
 xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Primary>q' -s close_window_key
 xfconf-query -c xfce4-keyboard-shortcuts -n -t 'string' -p '/commands/custom/<Super>Left' -s tile_left_key
